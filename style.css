@@ -1,0 +1,144 @@
+/*GOOGLE FONTS*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* General Reset and Font*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #fff;
+    color: #111;
+}
+
+/* Header & Navigation*/
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #98FBCB;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    padding: 0 1.5rem;
+}
+
+.nav_logo img {
+    height: 30px;
+    width: auto;
+}
+
+/* Nav Toggle (hamburger icon) */
+.nav_toggle {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #fff;
+    display: block;
+    z-index: 101;
+    position: relative;
+}
+
+/*  Navigation Menu */
+.nav_menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: #98FBCB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.4s ease;
+    z-index: 100;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Show Menu Class*/
+.nav_menu {
+    right: -100%;
+    transition: right 0.4s ease;
+    
+}
+
+.nav_menu.show-menu {
+    right: 0;
+}
+
+/*Nav List*/
+.nav_list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+}
+
+.nav_link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav_link:hover {
+    color: #60a5fa;
+}
+
+
+.nav_link.active-link::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background-color: #3b82f6;
+    left: 25%;
+    bottom: -6px;
+}
+
+/*Responsive for Desktop */
+@media (min-width: 768px) {
+    .nav_toggle {
+        display: none;
+    }
+
+    .nav_menu {
+        position: static;
+        height: auto;
+        width: auto;
+        background: none;
+        flex-direction: row;
+        box-shadow: none;
+    }
+
+    .nav_list {
+        flex-direction: row;
+        gap: 2.5rem;
+    }
+
+    .nav_link {
+        color: #ffffff;
+    }
+
+    .nav_link.active-link::after {
+        bottom: -4px;
+    }
+}
