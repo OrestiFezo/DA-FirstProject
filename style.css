@@ -1,26 +1,21 @@
 /*GOOGLE FONTS*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-
 body {
     font-family: "Roboto", sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #fff;
+    color: #111;
 }
 
-/* General Reset and Font*/
+/* General Reset */
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-body {
-    font-family: "Roboto", sans-serif;
-    background-color: #fff;
-    color: #111;
-}
-
-/* Header & Navigation*/
+/* Header & Navigation */
 .header {
     width: 100%;
     position: fixed;
@@ -35,18 +30,19 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 4rem;
-    padding: 0 1.5rem;
+    height: 5rem;
+    padding: 0 2rem; 
 }
 
 .nav_logo img {
-    height: 30px;
+    height: 45px; 
     width: auto;
+    margin-left: 2rem;
 }
 
 /* Nav Toggle (hamburger icon) */
 .nav_toggle {
-    font-size: 1.5rem;
+    font-size: 2rem;
     cursor: pointer;
     color: #fff;
     display: block;
@@ -54,7 +50,7 @@ body {
     position: relative;
 }
 
-/*  Navigation Menu */
+/* Navigation Menu */
 .nav_menu {
     position: fixed;
     top: 0;
@@ -70,31 +66,24 @@ body {
     box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Show Menu Class*/
-.nav_menu {
-    right: -100%;
-    transition: right 0.4s ease;
-    
-}
-
 .nav_menu.show-menu {
     right: 0;
 }
 
-/*Nav List*/
+/* Nav List */
 .nav_list {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 2.5rem; 
     text-align: center;
 }
 
 .nav_link {
     color: #fff;
     text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 1.4rem; 
+    font-weight: 700;
     position: relative;
     transition: color 0.3s;
 }
@@ -103,18 +92,17 @@ body {
     color: #60a5fa;
 }
 
-
 .nav_link.active-link::after {
     content: '';
     position: absolute;
     width: 50%;
-    height: 2px;
+    height: 3px; 
     background-color: #3b82f6;
     left: 25%;
-    bottom: -6px;
+    bottom: -8px;
 }
 
-/*Responsive for Desktop */
+/* Responsive for Desktop */
 @media (min-width: 768px) {
     .nav_toggle {
         display: none;
@@ -131,14 +119,15 @@ body {
 
     .nav_list {
         flex-direction: row;
-        gap: 2.5rem;
+        gap: 3rem; 
     }
 
     .nav_link {
         color: #ffffff;
+        font-size: 1.3rem; 
     }
 
     .nav_link.active-link::after {
-        bottom: -4px;
+        bottom: -6px;
     }
 }
