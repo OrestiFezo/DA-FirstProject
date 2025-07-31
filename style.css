@@ -241,68 +241,59 @@ body {
     display: flex;
     flex-direction: column;
 }
-
-/*Footer fix for smaller screens */
-@media (max-width: 768px) { 
-   .footer-content {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        padding: 10px 5px;
-    }
-
-    .footer-content div {
-        width: 100%;
-        flex: unset;
-        margin-bottom: 10px;
-        text-align: center;
-    }
-
-    .image {
-        height: 55px;
-        margin: 5px auto 10px auto;
-        display: block;
-    }
-
-    .finfo,
-    .cont,
-    .copyright {
-        margin-left: 0;
-        margin-right: 0;
-        text-align: center;
-    }
-
-    .cont {
-        margin: 10px 0;
-        padding: 5px 0;
-    }
-
-    .input {
-        width: 100%;
-        max-width: 220px;
-    }
-
-    .social {
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        margin: 10px 0;
-        padding: 0;
-    }
-
-    .social h5 {
-        margin-bottom: 8px;
-    }
-
-    .ico {
-        width: 35px;
-        height: 35px;
-        padding: 3px;
-    }
+/*Contact Section*/
+.contact-section {
+  padding-top: 3rem ;
+  padding-bottom: 3rem;
+  width:90%;
+  margin: 0 auto;
 }
+#contactForm {
+    background-color: #f9f9f9;
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+  }
 
-/*Responsive for Desktop */
+  #contactForm input,
+  #contactForm textarea {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    transition: border-color 0.3s ease;
+    margin-bottom: 1.2rem;
+  }
+  #contactForm input:focus,
+  #contactForm textarea:focus {
+    border-color: #3b82f6;
+    outline: none;
+    box-shadow: 0 0 8px rgba(59, 130, 246, 0.3);
+  }
+  #contactForm button {
+    background: linear-gradient(45deg, #3b82f6, #60a5fa);
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 0.85rem 2.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .contact-card {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  .contact-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  #contactForm button:hover {
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  }
+/* Responsive for Desktop */
 @media (min-width: 768px) {
     .nav_toggle {
         display: none;
