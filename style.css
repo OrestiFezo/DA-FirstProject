@@ -21,7 +21,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #98FBCB;
+    background-color: #4DBD91;
     z-index: 100;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -35,7 +35,7 @@ body {
 }
 
 .nav_logo img {
-    height: 45px; 
+    height: 60px; 
     width: auto;
     margin-left: 2rem;
 }
