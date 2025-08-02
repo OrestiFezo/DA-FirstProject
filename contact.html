@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="header-placeholder"></div>
 <!--Contact Us Form-->
 <section class="contact-section">
   <h2 class="mb-4 text-center">Contact Us</h2>
@@ -62,7 +63,22 @@
           </div>
         </div>
 </section>
+<div id="footer-placeholder"></div>
  <!--Custom JS -->
  <script src="main.js"></script>
+ <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    fetch("header.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("header-placeholder").innerHTML = data;
+      });
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  });
+</script>
 </body>
 </html>
