@@ -18,32 +18,54 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 //Contact Form Validation
-document.getElementById('contactForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault(); 
 
-    const emailRegex = /^[^@]+@[^@]+\.[a-z]{2,}$/i;
-    if (!emailRegex.test(email)) {
-      alert("Please enter a valid email address.");
-      return;
-    }
-    if (!name || !email || !message) {
-      // Show error
-      formMessage.className = "alert alert-danger";
-      formMessage.textContent = "Please fill in all fields.";
-      formMessage.classList.remove("d-none");
-    } 
-    else {
-      formMessage.className = "alert alert-success";
-      formMessage.textContent = "Your message has been sent successfully. Thank you!";
-      formMessage.classList.remove("d-none");
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const message = document.getElementById('message').value.trim();
+  const formMessage = document.getElementById("formMessage");
+
+  const emailRegex = /^[^@]+@[^@]+\.[a-z]{2,}$/i;
+
+  if (!name || !email || !message || !emailRegex.test(email)) {
+    formMessage.className = "alert alert-danger";
+    formMessage.textContent = "Please fill in all fields correctly.";
+    formMessage.classList.remove("d-none");
+    return;
+  }
+  // Build the form data manually
+  const formData = new FormData();
+  formData.append("name", name);
+  formData.append("email", email);
+  formData.append("message", message);
+  formData.append("_captcha", "false"); 
+
+  fetch("https://formsubmit.co/elsatafani04@gmail.com", {
+    method: "POST",
+    body: formData
+  })
+  .then(response => {
+    if (response.ok) {
+      const thankYouModal = new bootstrap.Modal(document.getElementById('thankYouModal'));
+      thankYouModal.show();
       document.getElementById("contactForm").reset();
-    }
-    // Hide message after 5 seconds
-    setTimeout(() => {
       formMessage.classList.add("d-none");
-    }, 5000);
+    } else {
+      formMessage.className = "alert alert-danger";
+      formMessage.textContent = "Something went wrong. Please try again.";
+      formMessage.classList.remove("d-none");
+    }
+  })
+  .catch(error => {
+    formMessage.className = "alert alert-danger";
+    formMessage.textContent = "There was a problem sending your message.";
+    formMessage.classList.remove("d-none");
+    console.error(error);
   });
-  
+
+  // Hide alert after 5 seconds
+  setTimeout(() => {
+    formMessage.classList.add("d-none");
+  }, 5000);
+});
