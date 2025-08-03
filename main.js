@@ -41,7 +41,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   formData.append("message", message);
   formData.append("_captcha", "false"); 
 
-  fetch("https://formsubmit.co/elsatafani04@gmail.com", {
+  fetch("https://formsubmit.co/example@email.com", {
     method: "POST",
     body: formData
   })
