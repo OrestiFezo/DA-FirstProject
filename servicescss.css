@@ -171,6 +171,10 @@ body {
 .slcard img {
     transform: translateZ(0);
     backface-visibility: hidden;
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
 }
 
 .sltext {
@@ -366,5 +370,128 @@ body {
   .price {
     flex-direction: column;
     gap: 10px;
+  }
+    .services-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .slcontainer {
+    max-width: 95%;
+  }
+
+  .slcard {
+    flex-direction: column;
+  }
+
+  .modalcont {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .text {
+    left: 50%;
+    width: 80%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+
+  .about h1 {
+    font-size: 2rem;
+  }
+
+  .gallery h2 {
+    font-size: 1.8rem;
+  }
+    .infobtn, .book {
+    min-width: 120px;
+    min-height: 44px; 
+  }
+}
+
+/* For mobile devices (480px and below) */
+@media (max-width: 480px) {
+  .services-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .service-item {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .si {
+    width: 70px;
+  }
+
+  .about h1 {
+    font-size: 1.8rem;
+  }
+
+  .about p {
+    text-align: center;
+  }
+
+  .modalcont {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .features li {
+    font-size: 14px;
+  }
+
+  .price {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .appointment h2 {
+    font-size: 1.5rem;
+  }
+
+  .book {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+@media (max-height: 480px) and (orientation: landscape) {
+  .modalcont {
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .services-list {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .slcontainer {
+    max-width: 1200px;
+  }
+
+  .modalcont {
+    max-width: 600px;
+  }
+}
+
+/* For extra large screens (1600px and above) */
+@media (min-width: 1600px) {
+  .services-list {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1400px;
+  }
+
+  .service-item {
+    padding: 20px;
+  }
+
+  .modalcont {
+    max-width: 700px;
+    padding: 40px;
   }
 }
