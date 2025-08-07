@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <title>Services</title>
+    <link rel="stylesheet" href="servicescss.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+      <script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('header').innerHTML = data);
+
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('footer').innerHTML = data);
+  </script>
+
+    </head>
+    <body>
+        <div id="header"></div>
+        <div class="main">
+            <img src="Images/dentcheck.jpg" alt="Clinic" class="clinic">
+            <div class="text">
+                <p>Your smile is our priority.</p>
+                <a href="#" onclick="document.getElementById('services').scrollIntoView({ behavior: 'smooth' })" class="button">Explore Services!</a>
+            </div>
+        </div>
+        
+        <div class="services" id="services">
+            <section class="about">
+                <h1>What we offer!</h1>
+                <p>At our clinic, we provide comprehensive dental care with a gentle, personalized approach. 
+                    From routine cleanings and check-ups to advanced treatments like implants and cosmetic dentistry, 
+                    we’re here to help you achieve a healthy, confident smile. 
+                    Whether you're visiting for prevention, repair, or a smile makeover — you're in expert hands.
+                </p>
+
+            </section>
+            <section class="services-list">
+                <div class="service-item">
+                    <img src="Images/Icons/cleaning.png" alt="Check-Up & Cleaning" class="si">
+                    <h3>Check-Up & Cleaning</h3>
+                    <p>Routine dental exams and professional cleanings 
+                    to maintain oral health and prevent issues like cavities and gum disease.</p>
+                    <button class="infobtn">More info</button>
+                </div>
+                <div class="service-item">
+                    <img src="Images/Icons/whitening.png" alt="Teeth Whitening" class="si">
+                    <h3>Teeth Whitening</h3>
+                    <p>Safe, effective treatments to brighten your smile by 
+                    removing stains and discoloration from the teeth.</p>
+                    <button class="infobtn">More info</button>
+                </div>
+                <div class="service-item">
+                    <img src="Images/Icons/fillings.png" alt="Dental Fillings" class="si">
+                    <h3>Dental Fillings</h3>
+                    <p>Used to restore teeth damaged by cavities, using durable, tooth-colored materials that blend naturally.</p>
+                    <button class="infobtn">More info</button>
+                </div>
+                <div class="service-item">
+                    <img src="Images/Icons/root.png" alt="Root Canal Therapy" class="si">
+                    <h3>Root Canal Therapy</h3>
+                    <p>Used to restore teeth damaged by cavities, using durable, tooth-colored materials that blend naturally.</p>
+                    <button class="infobtn">More info</button>
+                </div>
+                <div class="service-item">
+                    <img src="Images/Icons/crown.png" alt="Crowns & Bridges" class="si">
+                    <h3>Crowns & Bridges</h3>
+                    <p>Crowns protect and strengthen damaged teeth, 
+                    while bridges replace missing teeth using adjacent ones for support.</p>
+                    <button class="infobtn">More info</button>
+                </div>
+                <div class="service-item">
+                    <img src="Images/Icons/extrection.png" alt="Tooth Extraction" class="si">
+                    <h3>Tooth Extraction</h3>
+                    <p>The safe removal of severely damaged or 
+                    impacted teeth (including wisdom teeth) to protect overall oral health.</p>
+                    <button class="infobtn">More info</button>
+                </div>
+                <div class="service-item">
+                    <img src="Images/Icons/cosmetics.png" alt="Cosmetic Dentistry" class="si">
+                    <h3>Cosmetic Dentistry</h3>
+                    <p>Smile-enhancing treatments like veneers, bonding, and contouring to improve the appearance of your teeth.</p>
+                    <button class="infobtn">More info</button>
+                </div>
+                <div class="service-item">
+                    <img src="Images/Icons/Orthodontics.png" alt="Orthodontics" class="si">
+                    <h3>Orthodontics</h3>
+                    <p>Treatments to straighten misaligned teeth and correct bite issues using traditional braces or clear aligners like Invisalign.</p>
+                    <button class="infobtn">More info</button>
+                </div>
+
+            </section>
+            <section class="gallery" id="gallery">
+                <h2>Clinic Tour</h2>
+            <div class="slcontainer">
+
+                <button class="ar left">&#10094;</button>
+                <div class="sltrack">
+                    <div class="slcard">
+                        <div class="slimg">
+                            <img src="Images/clinic1.png" alt="Clinic">
+                        </div>
+                        <div class="sltext">
+                            <h2>Care That Connects</h2>
+                            <p>We make every visit personal — focused on your comfort, your smile, and your peace oF mind.</p>
+                        </div>
+                    </div>
+                    <div class="slcard">
+                        <div class="slimg">
+                            <img src="Images/clinic2.png" alt="Clinic">
+                        </div>
+                        <div class="sltext">
+                            <h2>Tech-Driven Precision</h2>
+                            <p>From digital X-rays to modern tools, we use the latest technology to deliver faster, safer, and more accurate care.</p>
+                        </div>
+                    </div>
+                    <div class="slcard">
+                        <div class="slimg">
+                            <img src="Images/clinic3.jpg" alt="Clinic">
+                        </div>
+                        <div class="sltext">
+                            <h2>Experts Who Listen</h2>
+                            <p>Our skilled team combines clinical expertise with real empathy — making you feel heard, safe, and in trusted hands.</p>
+                        </div>
+                    </div>
+                    <div class="slcard">
+                        <div class="slimg">
+                            <img src="Images/clinic4.jpg" alt="Clinic">
+                        </div>
+                        <div class="sltext">
+                            <h2>Designed for Comfort</h2>
+                            <p>Our clinic feels nothing like a clinic. Clean, calm, and inviting — it's a space built to ease dental anxiety.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="ar right">&#10095;</button>
+
+            </div>
+
+            </section>
+        </div>
+
+        <div class="appointment">
+            <h2>Book Your Appointment Today!</h2>
+            <a href="contact.html" class="book">Book Now!</a>
+        </div>
+
+        <div class="modal" id="serviceModal">
+            <div class="modalcont">
+                <span class="closem">&times;</span>
+                    <h2 id="mTitle">Service Title</h2>
+                    <p id="mDesc">Service description will appear here...</p>
+                <div class="actions">
+                    <a href="contact.html" class="book">Book Appointment!</a>
+                </div>
+            </div>
+        </div>
+
+    <div id="footer"></div>
+    </body>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.slcard');
+    let autoSlideInterval;
+    
+
+    function moveSlider() {
+        const slideWidth = slides[0].clientWidth;
+        document.querySelector('.sltrack').style.transform = 
+            `translateX(-${currentIndex * slideWidth}px)`;
+    }
+    
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(() => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            moveSlider();
+        }, 3000);
+    }
+    
+    document.querySelector('.ar.left').addEventListener('click', function() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        moveSlider();
+    });
+    
+    document.querySelector('.ar.right').addEventListener('click', function() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        moveSlider();
+    });
+    
+    moveSlider();
+    startAutoSlide();
+    });
+
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    // Modal functionality
+    const modal = document.getElementById('serviceModal');
+    const modalTitle = document.getElementById('mTitle');
+    const modalDesc = document.getElementById('mDesc');
+    const closeBtn = document.querySelector('.closem');
+
+    // Complete service data
+    const services = [
+        {
+            title: "Professional Check-Up & Cleaning",
+            description: `<ul class="features">
+                            <li>45-minute comprehensive exam with dentist</li>
+                            <li>Gentle tartar removal with ultrasonic scaler</li>
+                            <li>Stain removal with air polishing</li>
+                            <li>Oral cancer screening</li>
+                            <li>Personalized hygiene plan</li>
+                        </ul>
+                        <div class="price">
+                            <span>⏱️ 45-60 minutes</span>
+                            <span>💵 $129 ($99 for insured patients)</span>
+                        </div>`
+        },
+        {
+            title: "Teeth Whitening",
+            description: `<ul class="features">
+                            <li>8 shades whiter in just 1 visit</li>
+                            <li>Zero sensitivity guarantee</li>
+                            <li>LED-accelerated bleaching</li>
+                            <li>Includes take-home maintenance kit</li>
+                            <li>18-month results guarantee</li>
+                        </ul>
+                        <div class="price">
+                            <span>⏱️ 1 hour</span>
+                            <span>💵 $399 (includes 3 touch-up pens)</span>
+                        </div>`
+        },
+        {
+            title: "Dental Fillings",
+            description: `<ul class="features">
+                            <li>BPA-free ceramic/composite materials</li>
+                            <li>Laser cavity detection (minimal drilling)</li>
+                            <li>Anatomical shaping for perfect bite</li>
+                            <li>Perfect color matching to your enamel</li>
+                            <li>5-year warranty on all fillings</li>
+                        </ul>
+                        <div class="price">
+                            <span>⏱️ 30-45 minutes</span>
+                            <span>💵 $179-$299 (size dependent)</span>
+                        </div>`
+        },
+        {
+            title: "Root Canal Therapy",
+            description: `<ul class="features">
+                            <li>Virtually pain-free procedure</li>
+                            <li>3D-guided precision with digital imaging</li>
+                            <li>Laser disinfection for better results</li>
+                            <li>Same-day ceramic crown option</li>
+                            <li>95% success rate (higher than average)</li>
+                        </ul>
+                        <div class="price">
+                            <span>⏱️ 1-2 visits</span>
+                            <span>💵 $899-$1,299 (includes core build-up)</span>
+                        </div>`
+        },
+        {
+            title: "Crowns & Bridges",
+            description: `<ul class="features">
+                            <li>Same-day CEREC crowns available</li>
+                            <li>E.max® lithium disilicate (strongest material)</li>
+                            <li>Perfect color matching technology</li>
+                            <li>10-year warranty on craftsmanship</li>
+                            <li>Bite-optimized design for comfort</li>
+                        </ul>
+                        <div class="price">
+                            <span>⏱️ 2 hours</span>
+                            <span>💵 $1,199 per crown</span>
+                        </div>`
+        },
+        {
+            title: "Tooth Extraction",
+            description: `<ul class="features">
+                            <li>Piezosurgery® for trauma-free removal</li>
+                            <li>Immediate bone grafting available</li>
+                            <li>PRF membrane for faster healing</li>
+                            <li>Same-day implant options</li>
+                            <li>IV sedation available for anxious patients</li>
+                        </ul>
+                        <div class="price">
+                            <span>⏱️ 30-90 minutes</span>
+                            <span>💵 $199-$599 (complexity dependent)</span>
+                        </div>`
+        },
+        {
+            title: "Cosmetic Dentistry",
+            description: `<ul class="features">
+                            <li>Complete smile makeovers</li>
+                            <li>Digital smile preview technology</li>
+                            <li>Veneers/Lumineers® (ultra-thin 0.3mm)</li>
+                            <li>Laser gum contouring</li>
+                            <li>3D-printed wax-up models</li>
+                        </ul>
+                        <div class="price">
+                            <span>⏱️ 2-3 visits</span>
+                            <span>💵 $1,999-$4,999 (custom quote)</span>
+                        </div>`
+        },
+        {
+            title: "Orthodontics",
+            description: `<ul class="features">
+                            <li>Invisalign® Platinum Provider</li>
+                            <li>30% faster average treatment time</li>
+                            <li>Free whitening during treatment</li>
+                            <li>24/7 emergency monitoring</li>
+                            <li>Guaranteed results</li>
+                        </ul>
+                        <div class="price">
+                            <span>⏱️ 6-18 months</span>
+                            <span>💵 $3,999-$6,999 (flexible plans)</span>
+                        </div>`
+        }
+    ];
+
+   
+    document.querySelectorAll('.infobtn').forEach((btn, index) => {
+        btn.addEventListener('click', function() {
+            modalTitle.textContent = services[index].title;
+            modalDesc.innerHTML = services[index].description;
+            modal.style.display = "block";
+            document.body.style.overflow = "hidden";
+        });
+    });
+
+    closeBtn.addEventListener('click', function() {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+    });
+
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+    });
+});
+</script>
+</html>
