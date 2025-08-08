@@ -6,16 +6,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <script>
-    fetch('header.html')
-      .then(res => res.text())
-      .then(data => document.getElementById('header').innerHTML = data);
-
-    fetch('footer.html')
-      .then(res => res.text())
-      .then(data => document.getElementById('footer').innerHTML = data);
-  </script>
-
     </head>
     <body>
         <div id="header"></div>
@@ -159,9 +149,51 @@
         </div>
 
     <div id="footer"></div>
-    </body>
+
     <script>
-document.addEventListener('DOMContentLoaded', function() {
+        //Header call
+     document.addEventListener("DOMContentLoaded", () => {
+
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+
+                //Initialize nav toggle
+                const toggle = document.getElementById("nav-toggle");
+                const menu = document.getElementById("nav-menu");
+                const links = document.querySelectorAll(".nav_link");
+
+                if (toggle && menu) {
+                    toggle.addEventListener("click", () => {
+                        menu.classList.toggle("show-menu");
+                        console.log("Menu toggled");
+                    });
+                }
+
+                links.forEach(link => {
+                    link.addEventListener("click", () => {
+                        menu.classList.remove("show-menu");
+                    });
+                });
+            })
+            .catch(error => {
+                console.error("Error loading header:", error);
+            });
+
+        // Load footer
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;
+            })
+            .catch(error => {
+                console.error("Error loading footer:", error);
+            });
+    });
+
+    //Slider functionality
+     document.addEventListener('DOMContentLoaded', function() {
     let currentIndex = 0;
     const slides = document.querySelectorAll('.slcard');
     let autoSlideInterval;
@@ -194,11 +226,9 @@ document.addEventListener('DOMContentLoaded', function() {
     startAutoSlide();
     });
 
-</script>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
     // Modal functionality
+
+    document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById('serviceModal');
     const modalTitle = document.getElementById('mTitle');
     const modalDesc = document.getElementById('mDesc');
@@ -341,6 +371,9 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.style.overflow = "auto";
         }
     });
-});
-</script>
+    });
+    </script>
+
+    </body>
+
 </html>
